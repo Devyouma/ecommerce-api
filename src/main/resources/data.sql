@@ -11,3 +11,7 @@ VALUES
   
   ('PROD-005', 'Chaise de Bureau', 'Ergonomique en cuir', 'chair.jpg', 'Mobilier', 299.99, 8, 'REF-INT-005', 1005, 'LOWSTOCK', 4.3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+/* Script d'insertion pour la table app_user */
+INSERT INTO app_user (username, firstname, email, password) VALUES
+  ('admin', 'Admin', 'admin@admin.com', '$2a$12$PyVK2p90g2A7OG.Ay9Yj9uHfH62SvuR5MrpPgffmiz27RmdDmuHU6'), -- password = admin123
+  ('youssef', 'Maa', 'youssef@example.com', '$2a$12$/NQZIZQA/ReKvKRR48.AHub7OPpkl5XOo7gpMQpSMSuKakH000Xme');  -- password = youssefpass
