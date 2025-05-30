@@ -39,7 +39,7 @@ public class SecurityConfig {
         http.csrf().disable()
         	.headers(headers -> headers.frameOptions().disable())
             .authorizeHttpRequests()
-            .requestMatchers("/token", "/account", "/swagger-ui/**", "/v3/api-docs/**", "/h2-console/**").permitAll()
+            .requestMatchers("/token", "/account", "/swagger-ui/**", "/v3/api-docs/**", "/h2-console/**", "/api/wishlist").permitAll()
             .requestMatchers(HttpMethod.POST, "/api/products").access(adminOnly())
             .requestMatchers(HttpMethod.PATCH, "/api/products/**").access(adminOnly())
             .requestMatchers(HttpMethod.DELETE, "/api/products/**").access(adminOnly())

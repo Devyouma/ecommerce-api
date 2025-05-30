@@ -1,7 +1,7 @@
 # ALTEN SHOP back
 
 Prérequis
-Java 17+ (ou version compatible avec ton projet)
+Java 17+ 
 Maven 3+
 Base de données configurée (H2) 
 

@@ -2,7 +2,6 @@ package com.alten.ecommerce.dto;
 
 import com.alten.ecommerce.model.Product.InventoryStatus;
 
-import jakarta.validation.constraints.*;
 import lombok.Data;
 
 public class ProductDTOs {

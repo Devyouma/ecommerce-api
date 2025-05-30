@@ -15,3 +15,15 @@ VALUES
 INSERT INTO app_user (username, firstname, email, password) VALUES
   ('admin', 'Admin', 'admin@admin.com', '$2a$12$PyVK2p90g2A7OG.Ay9Yj9uHfH62SvuR5MrpPgffmiz27RmdDmuHU6'), -- password = admin123
   ('youssef', 'Maa', 'youssef@example.com', '$2a$12$/NQZIZQA/ReKvKRR48.AHub7OPpkl5XOo7gpMQpSMSuKakH000Xme');  -- password = youssefpass
+  
+-- Création des wishlists pour les utilisateurs
+INSERT INTO wishlist (id, user_id) VALUES 
+  (1, (SELECT id FROM app_user WHERE email = 'admin@admin.com')),
+  (2, (SELECT id FROM app_user WHERE email = 'youssef@example.com'));
+
+-- Association des produits aux wishlists (wishlist_products est la table de jointure)
+INSERT INTO wishlist_products (wishlist_id, products_id) VALUES
+  (1, (SELECT id FROM product WHERE code = 'PROD-001')), -- Admin
+  (1, (SELECT id FROM product WHERE code = 'PROD-003')), -- Admin
+  (2, (SELECT id FROM product WHERE code = 'PROD-002')), -- Youssef
+  (2, (SELECT id FROM product WHERE code = 'PROD-004')); -- Youssef
